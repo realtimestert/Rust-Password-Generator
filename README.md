@@ -2,21 +2,19 @@
 
 A simple command-line password generator written in Rust.
 
-The program allows you to specify the desired password length, generates a random password using uppercase letters, lowercase letters, numbers, and special characters, and saves the generated password to `passwords.txt`.
+A simple command-line password generator written in Rust. The program allows you to specify the desired password length and generates a random password using uppercase letters, lowercase letters, numbers, and special characters.
 
 ## Features
 
-* Choose the password length
-* Generates random passwords
-* Uses:
-
-  * Lowercase letters
-  * Uppercase letters
-  * Numbers
-  * Special characters
-* Saves generated passwords to `passwords.txt`
-* Type `exit` to quit without generating a password
-* Written in Rust
+- Choose the password length
+- Generates random passwords
+- Uses:
+  - Lowercase letters
+  - Uppercase letters
+  - Numbers
+  - Special characters
+- Type `exit` to quit without generating a password
+- Written in Rust
 
 ## Requirements
 
@@ -132,25 +130,19 @@ You can run it directly:
 ```bash
 ./target/release/Rust-Password-Generator
 ```
+## Security Note
 
-## Important Security Note
+This program generates passwords locally on your computer and does not save generated passwords to a file or send them over the network.
 
-This program is intended as a simple Rust learning project and password generator.
-
-The generated passwords are saved in plain text to:
-
-
-**Do not use this program to store important passwords unless you understand and accept the security implications of storing passwords in an unencrypted text file.**
+Generated passwords are displayed directly in the terminal.
 
 ## Recommended `.gitignore`
 
-Create a `.gitignore` file in the project directory:
+The `.gitignore` file excludes Cargo's build directory from the repository:
 
 ```gitignore
 /target/
 ```
-
-This prevents Cargo's build directory and your generated passwords from being committed to Git.
 
 ## License
 
