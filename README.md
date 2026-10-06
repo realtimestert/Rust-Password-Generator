@@ -100,13 +100,13 @@ cargo build
 The executable will be located at:
 
 ```text
-target/debug/Rust-Password-Generator
+target/debug/rust_password-generator
 ```
 
 You can run it directly with:
 
 ```bash
-./target/debug/Rust-Password-Generator
+./target/debug/rust_password-generator
 ```
 
 ## Release Build
@@ -117,17 +117,6 @@ For an optimized release build:
 cargo build --release
 ```
 
-The optimized executable will be located at:
-
-```text
-target/release/Rust-Password-Generator
-```
-
-You can run it directly:
-
-```bash
-./target/release/Rust-Password-Generator
-```
 ## Security Note
 
 This program generates passwords locally on your computer and does not save generated passwords to a file or send them over the network.
