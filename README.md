@@ -1,18 +1,23 @@
 # Rust Password Generator
 
-A simple command-line password generator written in Rust. The program allows you to specify the desired password length and generates a random password using uppercase letters, lowercase letters, numbers, and special characters.
+A simple command-line password generator written in Rust.
+
+The program allows you to specify the desired password length and generates a random password using lowercase letters, uppercase letters, numbers, and special characters.
 
 ## Features
 
-- Choose the password length
-- Generates random passwords
-- Uses:
-  - Lowercase letters
-  - Uppercase letters
-  - Numbers
-  - Special characters
-- Type `exit` to quit without generating a password
-- Written in Rust
+* Choose the password length
+* Generate random passwords
+* Uses:
+
+  * Lowercase letters
+  * Uppercase letters
+  * Numbers
+  * Special characters
+* Type `exit` to quit
+* Passwords are displayed directly in the terminal
+* Passwords are **not saved to a file**
+* Written in Rust
 
 ## Requirements
 
@@ -21,7 +26,7 @@ You will need:
 * Rust
 * Cargo
 
-You can check whether Rust is installed with:
+Check that Rust and Cargo are installed:
 
 ```bash
 rustc --version
@@ -35,7 +40,7 @@ If both commands return a version number, you're ready to go.
 Clone the repository:
 
 ```bash
-git clone <https://github.com/realtimestert/Rust-Password-Generator.git>
+git clone https://github.com/realtimestert/Rust-Password-Generator.git
 ```
 
 Enter the project directory:
@@ -48,11 +53,11 @@ cd Rust-Password-Generator
 
 This project uses the [`rand`](https://crates.io/crates/rand) crate for random password generation.
 
-Cargo will automatically download the required dependencies when the project is built.
+Cargo automatically downloads the required dependencies when the project is built.
 
-## Running the Program
+## Running with Cargo
 
-The easiest way to run the program is:
+The easiest way to run the program while developing is:
 
 ```bash
 cargo run
@@ -75,7 +80,10 @@ The program will generate a password:
 ```text
 Generating password from 20 characters...
 Generated password: X7@kP2!mQ9#vL3$xR8?aB
+Exiting in 5 seconds...
 ```
+
+The generated password is displayed directly in the terminal and is not saved to a file.
 
 ## Exiting
 
@@ -100,13 +108,13 @@ cargo build
 The executable will be located at:
 
 ```text
-target/debug/rust_password-generator
+target/debug/password_generator
 ```
 
 You can run it directly with:
 
 ```bash
-./target/debug/rust_password-generator
+./target/debug/password_generator
 ```
 
 ## Release Build
@@ -117,19 +125,73 @@ For an optimized release build:
 cargo build --release
 ```
 
+The optimized executable will be located at:
+
+```text
+target/release/password_generator
+```
+
+You can run it directly with:
+
+```bash
+./target/release/password_generator
+```
+
+## Installing as a Terminal Command
+
+On Linux and macOS, you can install the release executable into your local binary directory:
+
+```bash
+mkdir -p ~/.local/bin
+cp target/release/password_generator ~/.local/bin/password-generator
+```
+
+You can then run the program from anywhere in the terminal:
+
+```bash
+password-generator
+```
+
+To verify which executable is being used:
+
+```bash
+which password-generator
+```
+
+## Updating the Program
+
+If you already cloned the repository, update it with:
+
+```bash
+cd ~/Rust-Password-Generator
+git pull
+```
+
+Rebuild the release version:
+
+```bash
+cargo build --release
+```
+
+Update the installed terminal command:
+
+```bash
+cp target/release/password_generator ~/.local/bin/password-generator
+```
+
+You can then run the updated version:
+
+```bash
+password-generator
+```
+
 ## Security Note
 
-This program generates passwords locally on your computer and does not save generated passwords to a file or send them over the network.
+This program generates passwords locally on your computer.
 
-Generated passwords are displayed directly in the terminal.
+Generated passwords are displayed directly in the terminal and are not saved to a file or transmitted over the network by this program.
 
-## Recommended `.gitignore`
-
-The `.gitignore` file excludes Cargo's build directory from the repository:
-
-```gitignore
-/target/
-```
+Be aware that terminal history, terminal scrollback, screen recording, or other software on your computer could potentially expose a generated password.
 
 ## License
 
