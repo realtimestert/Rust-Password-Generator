@@ -1,7 +1,5 @@
 # Rust Password Generator
 
-A simple command-line password generator written in Rust.
-
 A simple command-line password generator written in Rust. The program allows you to specify the desired password length and generates a random password using uppercase letters, lowercase letters, numbers, and special characters.
 
 ## Features
