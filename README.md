@@ -144,4 +144,4 @@ The `.gitignore` file excludes Cargo's build directory from the repository:
 
 ## License
 
-Add your preferred license here.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
