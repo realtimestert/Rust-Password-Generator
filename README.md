@@ -143,7 +143,22 @@ On Linux and macOS, you can install the release executable into your local binar
 
 ```bash
 mkdir -p ~/.local/bin
-cp target/release/password_generator ~/.local/bin/password-generator
+cp target/release/rust_password_generator ~/.local/bin/password-generator
+chmod +x ~/.local/bin/password-generator
+```
+
+Make sure Linux can find it. 
+Check whether ~/.local/bin is in yout path
+
+```bash
+echo "$PATH"
+```
+If the output inludes /home/USER/.local/bin, skip the next step.
+If it doesn't, add it to your Bash config:
+
+```bash
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 You can then run the program from anywhere in the terminal:
